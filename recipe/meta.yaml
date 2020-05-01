@@ -1,4 +1,4 @@
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/matrixTests_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/matrixTests/matrixTests_{{ version }}.tar.gz
-  sha256: da1488081df488ca6068208fde2462dd6b56709be263cc1b82ba170ce9b4c0a1
+  sha256: c2e463c7057519197b33fa7a866e2225bfa22a28467a690dccd4d8c3f2441089
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -22,7 +22,7 @@ build:
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-matrixstats
@@ -38,12 +38,9 @@ test:
 about:
   home: https://github.com/KKPMW/matrixTests
   license: GPL-2
-  summary: 'Functions to perform fast statistical hypothesis tests on rows/columns of matrices.
-    The main goals are: 1) speed via vectorization, 2) output that is detailed and easy
-    to use, 3) compatibility with tests implemented in R (like those available in the
-    ''stats'' package).'
+  summary: "Functions to perform fast statistical hypothesis tests on rows/columns of matrices. The main goals are: 1) speed via vectorization, 2) output that is detailed and easy to use, 3) compatibility with tests implemented in R (like those available in the 'stats' package)."
   license_family: GPL2
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
