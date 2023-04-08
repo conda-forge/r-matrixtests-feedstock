@@ -1,11 +1,11 @@
-About r-matrixtests
-===================
+About r-matrixtests-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-matrixtests-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/KKPMW/matrixTests
 
 Package license: GPL-2
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-matrixtests-feedstock/blob/main/LICENSE.txt)
 
 Summary: Functions to perform fast statistical hypothesis tests on rows/columns of matrices. The main goals are: 1) speed via vectorization, 2) output that is detailed and easy to use, 3) compatibility with tests implemented in R (like those available in the 'stats' package).
 
