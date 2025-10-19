@@ -1,4 +1,4 @@
-{% set version = "0.2.3" %}
+{% set version = "0.2.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/matrixTests_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/matrixTests/matrixTests_{{ version }}.tar.gz
-  sha256: eaeb732fa5b63165d4ca872f675eb488c546a338ab6054a56deeebdf1900f134
+  sha256: ccbf024557331a2ef0156f1c7c9c61f1c07c711c52bb8302aa5dd0d0411c2666
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
